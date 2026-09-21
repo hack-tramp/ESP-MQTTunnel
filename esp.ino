@@ -3,11 +3,11 @@
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
 
-const char* ssid = "your wifi";
+const char* ssid = "local wifi";
 const char* pass = "wifi password";
-const char* broker = "mqtt url eu.hivemq.cloud";
-const char* user = "mqtt usr";
-const char* mpass = "mqtt password";
+const char* broker = " url for MQTT bla1.eu.hivemq.cloud";
+const char* user = "MQTT username";
+const char* mpass = "MQTT password";
 
 WiFiClientSecure netclient;
 PubSubClient mqtt_client(netclient);
@@ -72,7 +72,7 @@ void print_bytes(const uint8_t* raw, size_t n) {
 }
 
 void publish_res(int conn_id, const char* host, int port, const uint8_t* raw, size_t n) {
-  static char out[8192];
+  static char out[32768];
   // base64 encode inline
   static const char* tbl = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
   size_t oi = 0;
@@ -195,7 +195,7 @@ void setup() {
   for (int i = 0; i < MAX_CONNS; i++) { conns[i].active = false; conns[i].id = -1; }
   
   mqtt_client.setServer(broker, 8883);
-  mqtt_client.setBufferSize(8192);
+  mqtt_client.setBufferSize(32768);
   mqtt_client.setCallback(callback);
   connectMQTT();
 }
@@ -207,10 +207,11 @@ void loop() {
   mqtt_client.loop();
 
   // poll upstream sockets for response bytes and print them
-  static uint8_t rbuf[1024];
+  static uint8_t rbuf[16384];
   for (int i = 0; i < MAX_CONNS; i++) {
     Conn* c = &conns[i];
     if (!c->active) continue;
+    if (millis() - c->last_used > 8000) { drop_conn(c); continue; }
     if (!c->sock.connected()) { drop_conn(c); continue; }
     int avail = c->sock.available();
     if (avail > 0) {
