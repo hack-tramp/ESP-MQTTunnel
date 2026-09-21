@@ -1,6 +1,6 @@
 # ESP32 HTTPS Proxy over MQTT
 
-A working proof-of-concept that turns an ESP32 into a TCP/HTTPS forwarder, using MQTT as the transport between a laptop-based proxy and the ESP32.
+A working proof-of-concept that turns an ESP32 into a $3 hardware proxy using an ESP32 that tunnels traffic over MQTT. Because it connects out to a broker, you can bypass censorship without open ports or a public IP.
 
 ---
 
@@ -30,7 +30,7 @@ The ESP32 is the actual TCP endpoint. The Python script acts as a local proxy on
 
 The ESP32 has **limited resources and no multithreading**, so it can't handle too many simultaneous connections.
 
-Images and video *do* work, but to save bandwidth (especially on a free MQTT account) and improve speed, consider using a content blocker such as **Block Image Reloaded** in Firefox.
+Images and video *do* work, but to save bandwidth (especially on a free MQTT account) and improve speed, consider using a content blocker such as **Block Image Reloaded** in Firefox. Trying to load pages in multiple tabs will not work.
 
 ---
 
