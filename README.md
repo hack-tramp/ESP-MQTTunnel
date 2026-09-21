@@ -1,6 +1,6 @@
 # ESP32 HTTPS Proxy over MQTT
 
-A working proof-of-concept that turns an ESP32 into a $3 hardware proxy using an ESP32 that tunnels traffic over MQTT. Because it connects out to a broker, you can bypass censorship without open ports or a public IP.
+A working proof-of-concept that turns an ESP32 into a $3 hardware proxy that tunnels traffic over MQTT. Because it connects out to a broker, you can bypass censorship without open ports or a public IP.
 
 ---
 
