@@ -102,13 +102,13 @@ const char* mpass   = "your-password";
 
 ### 3. Flash the ESP32
 
-Open esp32_proxy.ino in the Arduino IDE, select your ESP32 board, and upload. Open the Serial Monitor at 115200 baud to see activity. I prefer to use PuTTY so I can copy large amounts of output.
+Open esp.ino in the Arduino IDE, select your ESP32 board, and upload. Open the Serial Monitor at 115200 baud to see activity. I prefer to use PuTTY so I can copy large amounts of output.
 
 ### 4. Run the python proxy server
 
 ```
 pip install paho-mqtt
-python proxy.py
+python server.py
 ```
 
 You should see
