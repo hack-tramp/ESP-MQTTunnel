@@ -136,9 +136,10 @@ In Firefox:
 Visit any HTTPS site. Traffic will relay through MQTT to the ESP32 and out to the real server.
 
 ### MQTT topics
-|Topic	|Direction|	Purpose|
-|req	|Python → ESP32|	Client-to-server bytes (open, data, close)|
-|res	|ESP32 → Python|	Server-to-client bytes (data)|
+|Topic|Direction|Purpose|
+|---|---|---|
+|req|Python → ESP32|Client-to-server bytes (open, data, close)|
+|res|ESP32 → Python|Server-to-client bytes (data)|
 
 
 ### Message format
