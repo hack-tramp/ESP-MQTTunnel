@@ -4,7 +4,7 @@
 	  <img align="center" src="https://img.shields.io/badge/c%2B%2B-11-blue" href="https://github.com/topics/c-plus-plus-11">
 	  <img align="center" src="https://img.shields.io/badge/License-MIT-green.svg" href="https://opensource.org/licenses/MIT">
 <p align="center" style="font-size: 5px;">
-	[English](README.md) 
+
 	<sub>
   <a href="README.md" style=" text-decoration: none;">🇺🇸 English</a> &nbsp;</sub>
   <a href="README.zh-CN.md" style="text-decoration: none;">🇨🇳 中文</a> &nbsp;
@@ -17,7 +17,7 @@
   </h1>
 </p>
 
-
+	[English](README.md) 
 
 
 
