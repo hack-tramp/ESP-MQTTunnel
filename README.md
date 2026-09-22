@@ -14,14 +14,7 @@ The ESP32 is the actual TCP endpoint. The Python script acts as a local proxy on
 ---
 
 ## Tested with
-
-| Component | Version / Notes |
-|---|---|
-| ESP32 | ESP32-S3 Dev Module |
-| MQTT broker | HiveMQ Cloud (free tier) |
-| Laptop | Windows 10 |
-| Browser | Firefox |
-| Proxy | Python 3 |
+Windows 10 Firefox / Python 3 <--> ESP32-S3 Dev Module <--> HiveMQ Cloud (free tier)
 
 > ⚠️ The MQTT broker must be reachable from whichever country the laptop is in.
 
