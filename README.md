@@ -58,7 +58,7 @@ Tested with: Windows 10 Firefox / Python 3 <--> ESP32-S3 Dev Module <--> HiveMQ 
 
 ## Limitations
 
-The ESP32 has **limited resources and no multithreading**, so it can't handle too many simultaneous connections. Trying to load pages in multiple tabs will not work.
+The ESP32 has **limited resources**, so it can't handle too many simultaneous connections. Trying to load pages in multiple tabs will not work.
 
 Images and video *do* work, but to save bandwidth (especially on a free MQTT account) and improve speed, consider using a content blocker such as **Block Image Reloaded** in Firefox. 
 
