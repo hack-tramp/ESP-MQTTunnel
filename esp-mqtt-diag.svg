@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 430">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#111827"/>
+    </marker>
+    <style>
+      .box{fill:#fff;stroke:#111827;stroke-width:3}
+      .title{font:700 22px Arial,sans-serif;fill:#111827}
+      .sub{font:16px Arial,sans-serif;fill:#4b5563}
+      .arrow{stroke:#111827;stroke-width:3;fill:none;marker-end:url(#arrow)}
+      .mqtt{stroke:#2563eb;stroke-width:4;stroke-dasharray:10 8;fill:none;marker-end:url(#arrow)}
+      .small{font:14px Arial,sans-serif;fill:#2563eb}
+    </style>
+  </defs>
+
+  <text x="700" y="42" text-anchor="middle" style="font:700 28px Arial,sans-serif;fill:#111827">ESP-MQTTunnel</text>
+  <text x="700" y="70" text-anchor="middle" class="sub">Raw TCP traffic carried through MQTT</text>
+
+  <!-- boxes -->
+  <rect x="35" y="145" width="190" height="110" rx="18" class="box"/>
+  <text x="130" y="190" text-anchor="middle" class="title">Firefox</text>
+  <text x="130" y="218" text-anchor="middle" class="sub">HTTPS client</text>
+
+  <rect x="280" y="145" width="220" height="110" rx="18" class="box"/>
+  <text x="390" y="185" text-anchor="middle" class="title">Local Python</text>
+  <text x="390" y="213" text-anchor="middle" class="sub">HTTP proxy</text>
+  <text x="390" y="237" text-anchor="middle" class="sub">127.0.0.1:8080</text>
+
+  <rect x="555" y="125" width="290" height="150" rx="22" class="box"/>
+  <text x="700" y="170" text-anchor="middle" class="title">MQTT broker</text>
+  <text x="700" y="198" text-anchor="middle" class="sub">req → ESP32</text>
+  <text x="700" y="223" text-anchor="middle" class="sub">res ← ESP32</text>
+  <text x="700" y="250" text-anchor="middle" class="small">encrypted MQTT transport</text>
+
+  <rect x="900" y="145" width="210" height="110" rx="18" class="box"/>
+  <text x="1005" y="185" text-anchor="middle" class="title">ESP32</text>
+  <text x="1005" y="213" text-anchor="middle" class="sub">TCP endpoint</text>
+  <text x="1005" y="237" text-anchor="middle" class="sub">hardware proxy</text>
+
+  <rect x="1165" y="145" width="200" height="110" rx="18" class="box"/>
+  <text x="1265" y="190" text-anchor="middle" class="title">Real server</text>
+  <text x="1265" y="218" text-anchor="middle" class="sub">example.com:443</text>
+
+  <!-- arrows -->
+  <path d="M225 200H275" class="arrow"/>
+  <path d="M500 200H550" class="arrow"/>
+  <path d="M850 200H895" class="mqtt"/>
+  <path d="M1110 200H1160" class="arrow"/>
+
+  <!-- response path hint -->
+  <path d="M1160 300H500V275" style="stroke:#6b7280;stroke-width:2;stroke-dasharray:7 7;fill:none;marker-end:url(#arrow)"/>
+  <text x="830" y="326" text-anchor="middle" class="sub">server response travels back through ESP32 → MQTT → Python → Firefox</text>
+</svg>
