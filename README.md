@@ -3,13 +3,14 @@
   <h1 align="center">ESP-MQTTunnel <br>
 	  <img align="center" src="https://img.shields.io/badge/c%2B%2B-11-blue" href="https://github.com/topics/c-plus-plus-11">
 	  <img align="center" src="https://img.shields.io/badge/License-MIT-green.svg" href="https://opensource.org/licenses/MIT">
-<p align="center">
-  <a href="README.md"><img src="https://shields.io🇺🇸_English-fcfcfc?style=flat-square" alt="English"></a> &nbsp;
-  <a href="README.zh-CN.md"><img src="https://shields.io🇨🇳_中文-fcfcfc?style=flat-square" alt="中文"></a> &nbsp;
-  <a href="README.ru.md"><img src="https://shields.io🇷🇺_русский-fcfcfc?style=flat-square" alt="русский"></a> &nbsp;
-  <a href="README.hi.md"><img src="https://shields.io🇮🇳_हिंदी-fcfcfc?style=flat-square" alt="हिंदी"></a> &nbsp;
-  <a href="README.es.md"><img src="https://shields.io🇪🇸_español-fcfcfc?style=flat-square" alt="español"></a>
+<p align="center" style="font-size: 14px;">
+  <a href="README.md" style="text-decoration: none;">🇺🇸 English</a> &nbsp;&nbsp;
+  <a href="README.zh-CN.md" style="text-decoration: none;">🇨🇳 中文</a> &nbsp;&nbsp;
+  <a href="README.ru.md" style="text-decoration: none;">🇷🇺 русский</a> &nbsp;&nbsp;
+  <a href="README.hi.md" style="text-decoration: none;">🇮🇳 हिंदी</a> &nbsp;&nbsp;
+  <a href="README.es.md" style="text-decoration: none;">🇪🇸 español</a>
 </p>
+
 
 
 
