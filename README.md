@@ -5,7 +5,7 @@
 	  <img align="center" src="https://img.shields.io/badge/c%2B%2B-11-blue" href="https://github.com/topics/c-plus-plus-11">
 	  <img align="center" src="https://img.shields.io/badge/License-MIT-green.svg" href="https://opensource.org/licenses/MIT">
 	  <img align="center" src="https://www.ardu-badge.com/badge/MQTT.svg" href="https://mqtt.org">
-	  <img align="center" src="https://shields.io" href="https://arduino.cc">
+	  <img align="center" src="https://www.ardu-badge.com/badge/HttpClient.svg" href="https://arduino.cc">
   </h1>
 </p>
 	
