@@ -3,7 +3,10 @@
   <img width="200" src="https://github.com/hack-tramp/WNetWrap/blob/main/logo.png?raw=true">
   <h1 align="center">ESP-MQTTunnel <br>
 	  <img align="center" src="https://img.shields.io/badge/c%2B%2B-11-blue" href="https://github.com/topics/c-plus-plus-11">
+	  <img align="center" src="https://shields.io" href="https://python.org">
 	  <img align="center" src="https://img.shields.io/badge/License-MIT-green.svg" href="https://opensource.org/licenses/MIT">
+	  <img align="center" src="https://shields.io" href="https://mqtt.org">
+	  <img align="center" src="https://shields.io" href="https://arduino.cc">
   </h1>
 </p>
 	
