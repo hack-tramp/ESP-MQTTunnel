@@ -24,6 +24,19 @@ The ESP32 is the actual TCP endpoint. The Python script acts as a local proxy on
 Tested with: Windows 10 Firefox / Python 3 <--> ESP32-S3 Dev Module <--> HiveMQ Cloud (free tier)
 > ⚠️ The MQTT broker must be reachable from whichever country the laptop is in.
 ---
+
+## Confirmed working
+
+- ✅ YouTube
+- ✅ Gmail
+- ✅ Twitter / X
+- ✅ News sites
+- ✅ Reddit
+
+## Known issues
+
+- ❌ Instagram gets stuck
+---
 ## How it works
 
 1. The **ESP32** connects to your Wi-Fi and subscribes to the MQTT `req` topic.
@@ -46,24 +59,9 @@ Tested with: Windows 10 Firefox / Python 3 <--> ESP32-S3 Dev Module <--> HiveMQ 
 
 ## Limitations
 
-The ESP32 has **limited resources and no multithreading**, so it can't handle too many simultaneous connections.
+The ESP32 has **limited resources and no multithreading**, so it can't handle too many simultaneous connections. Trying to load pages in multiple tabs will not work.
 
-Images and video *do* work, but to save bandwidth (especially on a free MQTT account) and improve speed, consider using a content blocker such as **Block Image Reloaded** in Firefox. Trying to load pages in multiple tabs will not work.
-
----
-
-## Confirmed working
-
-- ✅ YouTube
-- ✅ Gmail
-- ✅ Twitter / X
-- ✅ News sites
-- ✅ Reddit
-
-## Known issues
-
-- ❌ Instagram gets stuck
-
+Images and video *do* work, but to save bandwidth (especially on a free MQTT account) and improve speed, consider using a content blocker such as **Block Image Reloaded** in Firefox. 
 
 ---
 
