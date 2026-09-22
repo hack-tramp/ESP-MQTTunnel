@@ -12,7 +12,7 @@
 
 
 
-A working proof-of-concept that turns an ESP32 into a $3 hardware proxy that tunnels traffic over MQTT. Because it connects out to a broker, you can bypass censorship without open ports or a public IP.
+A working PoC that turns an ESP32 into a $3 hardware proxy that tunnels traffic over MQTT. Because it connects out to a broker, you can bypass censorship without open ports or a public IP.
 
 ---
 
