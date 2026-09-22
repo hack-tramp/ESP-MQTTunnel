@@ -21,16 +21,9 @@ A working proof-of-concept that turns an ESP32 into a $3 hardware proxy that tun
 
 The ESP32 is the actual TCP endpoint. The Python script acts as a local proxy on the laptop. MQTT is just the pipe between them.
 ![Alt text](esp-mqtt-diag.svg)
-
----
-
-## Tested with
-Windows 10 Firefox / Python 3 <--> ESP32-S3 Dev Module <--> HiveMQ Cloud (free tier)
-
+Tested with: Windows 10 Firefox / Python 3 <--> ESP32-S3 Dev Module <--> HiveMQ Cloud (free tier)
 > ⚠️ The MQTT broker must be reachable from whichever country the laptop is in.
-
 ---
-
 ## How it works
 
 1. The **ESP32** connects to your Wi-Fi and subscribes to the MQTT `req` topic.
