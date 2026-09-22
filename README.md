@@ -3,7 +3,7 @@
   <h1 align="center">ESP-MQTTunnel <br>
 	  <img align="center" src="https://img.shields.io/badge/c%2B%2B-11-blue" href="https://github.com/topics/c-plus-plus-11">
 	  <img align="center" src="https://img.shields.io/badge/License-MIT-green.svg" href="https://opensource.org/licenses/MIT">
-<p align="center" style="font-size: 14px;">
+<p align="center" style="font-size: 12px;">
   <a href="README.md" style="text-decoration: none;">🇺🇸 English</a> &nbsp;&nbsp;
   <a href="README.zh-CN.md" style="text-decoration: none;">🇨🇳 中文</a> &nbsp;&nbsp;
   <a href="README.ru.md" style="text-decoration: none;">🇷🇺 русский</a> &nbsp;&nbsp;
