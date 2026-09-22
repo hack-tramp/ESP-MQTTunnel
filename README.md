@@ -19,8 +19,6 @@ A working proof-of-concept that turns an ESP32 into a $3 hardware proxy that tun
 
 ## What it does
 
-Firefox → **local Python proxy** → MQTT → **ESP32** → real server
-
 The ESP32 is the actual TCP endpoint. The Python script acts as a local proxy on the laptop. MQTT is just the pipe between them.
 ![Alt text](esp-mqtt-diag.svg)
 
