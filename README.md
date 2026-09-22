@@ -4,16 +4,14 @@
 	  <img align="center" src="https://img.shields.io/badge/c%2B%2B-11-blue" href="https://github.com/topics/c-plus-plus-11">
 	  <img align="center" src="https://img.shields.io/badge/License-MIT-green.svg" href="https://opensource.org/licenses/MIT">
 <p align="center" style="font-size: 5px;">
-  <a href="README.md" style="font-size: 5px; text-decoration: none;">🇺🇸 English</a> &nbsp;
+	[English](README.md) 
+	<sub>
+  <a href="README.md" style=" text-decoration: none;">🇺🇸 English</a> &nbsp;</sub>
   <a href="README.zh-CN.md" style="text-decoration: none;">🇨🇳 中文</a> &nbsp;
   <a href="README.ru.md" style="text-decoration: none;">🇷🇺 русский</a> &nbsp;
   <a href="README.hi.md" style="text-decoration: none;">🇮🇳 हिंदी</a> &nbsp;
   <a href="README.es.md" style="text-decoration: none;">🇪🇸 español</a>
 </p>
-
-
-
-
 
 
   </h1>
