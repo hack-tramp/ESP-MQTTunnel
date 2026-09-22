@@ -5,7 +5,9 @@
 	  <img align="center" src="https://img.shields.io/badge/License-MIT-green.svg" href="https://opensource.org/licenses/MIT">
   </h1>
 </p>
+
 [![English](https://shields.io)](README.md)
+
 [![Español](https://shields.io)](README.es.md)
 
 A working proof-of-concept that turns an ESP32 into a $3 hardware proxy that tunnels traffic over MQTT. Because it connects out to a broker, you can bypass censorship without open ports or a public IP.
