@@ -12,7 +12,7 @@
 
 
 
-A working PoC that turns an ESP32 into a hardware proxy that tunnels traffic over MQTT. Because it connects out to a broker, you can bypass firewalls/censorship without open ports or public IP.
+A working PoC that turns an ESP32 into a hardware proxy that tunnels traffic over MQTT. Because it connects out to a broker, you can bypass firewalls/censorship without open ports or public IP. All traffic is relayed **raw** — no TLS interception, no decryption.
 
 ---
 
@@ -48,12 +48,6 @@ Tested with: Windows 10 Firefox / Python 3 <--> ESP32-S3 Dev Module <--> HiveMQ 
 5. The ESP32 receives those messages, opens a real TCP socket to the target host, and forwards the bytes.
 6. Responses from the real server come back through MQTT (`res` topic), are received by the Python proxy, and written back to Firefox.
 
----
-
-## Notes
-
-- All traffic is relayed **raw** — no TLS interception, no decryption.
-- This is a PoC, not a hardened proxy. Expect rough edges under heavy parallel loads.
 ---
 
 ## Limitations
