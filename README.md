@@ -31,7 +31,7 @@ Here's an example to show how this works (for more technical details see below).
 1. The laptop browser tries to access a restricted website, and sends a request to the local python proxy, which sends this to the MQTT server.
 2. The ESP32 reads the bytes from the MQTT server and forwards them to the restricted website which is normally inaccessible from A. 
 3. ESP32 receives response from the website, and uploads it to the MQTT server.
-4. Laptop at A reads response from restricted website and (via python) shows it in the browser.
+4. Laptop at A reads the restricted site's response from the MQTT server and (via python) shows it in the browser.
 
 ![Alt text](esp-mqtt-diag.svg)
 Tested with: Windows 10 Firefox / Python 3 <--> ESP32-S3 Dev Module <--> HiveMQ Cloud (free tier)
