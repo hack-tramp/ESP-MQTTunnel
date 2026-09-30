@@ -138,4 +138,27 @@ Press Ctrl+C to stop
 ### MQTT-топики
 |Топик|Направление|Назначение|
 |---|---|---|
-|req|Python → ESP32
+|req|Python → ESP32|Байты от клиента к серверу (open, data, close)|
+|res|ESP32 → Python|Байты от сервера к клиенту (data)|
+
+
+### Формат сообщений
+
+## Все сообщения MQTT представлены в формате JSON:
+
+```json
+
+{
+"conn_id": 5,
+"host": "www.example.com",
+"port": 443,
+"type": "data",
+"data": "FgMBB2ABAAdc..."
+}
+```
+
+- type: одно из значений open, data, close
+
+- data: необработанные байты в кодировке base64 (или null для open/close)
+
+- conn_id: идентификатор TCP-соединения (Firefox открывает несколько соединений параллельно)
