@@ -21,8 +21,11 @@ A working PoC that turns an ESP32 into a hardware proxy that tunnels traffic ove
 Here's an example to show how this works (for more technical details see below). The purpose is to bypass internet restrictions.
 
 **Location A:** A country with highly censored / very restrictive internet. Laptop running Win10 + Firefox + local python proxy.
+
 **Location B:** Uncensored, free internet. ESP32 is connected here.
+
 **Location C:** MQTT server - this must be reachable from A and B but does not have to be in a place with uncensored internet.
+
 (definition: MQTT (Message Queuing Telemetry Transport) is a lightweight, open-standard messaging protocol designed for resource-constrained devices and unreliable networks)
 
 1. The laptop browser tries to access a restricted website, and sends a request to the local python proxy, which sends this to the MQTT server.
