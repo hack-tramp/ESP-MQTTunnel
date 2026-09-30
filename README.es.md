@@ -18,7 +18,21 @@ Una prueba de concepto funcional que convierte un ESP32 en un proxy de hardware 
 
 ## ¿Qué hace?
 
-El ESP32 actúa como el punto final TCP real. El script de Python funciona como un proxy local en el ordenador portátil. MQTT sirve simplemente como el canal de comunicación entre ambos. ![Texto alternativo](esp-mqtt-diag.svg)
+
+A continuación, se presenta un ejemplo para ilustrar su funcionamiento (para más detalles técnicos, consulte la sección inferior). El objetivo es eludir las restricciones de Internet.
+
+**Ubicación A:** Un país con Internet altamente censurado o muy restrictivo. Portátil con Windows 10, Firefox y un proxy local en Python.
+
+**Ubicación B:** Internet libre y sin censura. Aquí es donde se conecta el ESP32.
+
+**Ubicación C:** Servidor MQTT; debe ser accesible desde A y B, pero no es necesario que se encuentre en una zona con Internet sin censura. (definición: MQTT (Message Queuing Telemetry Transport) es un protocolo de mensajería ligero y de estándar abierto, diseñado para dispositivos con recursos limitados y redes poco fiables)
+
+1. El navegador del portátil intenta acceder a un sitio web restringido y envía una solicitud al proxy local de Python, el cual la transmite al servidor MQTT.
+2. El ESP32 lee los bytes del servidor MQTT y los reenvía al sitio web restringido, al que normalmente no se puede acceder desde A.
+3. El ESP32 recibe la respuesta del sitio web y la sube al servidor MQTT.
+4. El portátil en A lee la respuesta del sitio web restringido y (a través de Python) la muestra en el navegador.
+ 
+ ![Texto alternativo](esp-mqtt-diag.svg)
 Probado con: Windows 10 Firefox / Python 3 <--> ESP32-S3 Dev Module <--> HiveMQ Cloud (nivel gratuito)
 > ⚠️ El *broker* MQTT debe ser accesible desde el país donde se encuentre el portátil.
 ---
