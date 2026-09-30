@@ -30,7 +30,7 @@ A continuación, se presenta un ejemplo para ilustrar su funcionamiento (para m�
 1. El navegador del portátil intenta acceder a un sitio web restringido y envía una solicitud al proxy local de Python, el cual la transmite al servidor MQTT.
 2. El ESP32 lee los bytes del servidor MQTT y los reenvía al sitio web restringido, al que normalmente no se puede acceder desde A.
 3. El ESP32 recibe la respuesta del sitio web y la sube al servidor MQTT.
-4. El portátil en A lee la respuesta del sitio web restringido y (a través de Python) la muestra en el navegador.
+4. El portátil en A lee la respuesta del sitio restringido desde el servidor MQTT y (mediante Python) la muestra en el navegador.
  
  ![Texto alternativo](esp-mqtt-diag.svg)
 Probado con: Windows 10 Firefox / Python 3 <--> ESP32-S3 Dev Module <--> HiveMQ Cloud (nivel gratuito)
