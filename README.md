@@ -35,7 +35,7 @@ Here's an example to show how this works (for more technical details see below).
 
 3. **www.example.com ---> ESP32 ---> MQTT server :**  ESP32 receives response from the website, and uploads it to the MQTT server.
 
-4. **MQTT server ---> laptop: **  Laptop at A reads the restricted site's response from the MQTT server and (via python) shows it in the browser.
+4. **MQTT server ---> laptop:**  Laptop at A reads the restricted site's response from the MQTT server and (via python) shows it in the browser.
 
 ![Alt text](esp-mqtt-diag.svg)
 Tested with: Windows 10 Firefox / Python 3 <--> ESP32-S3 Dev Module <--> HiveMQ Cloud (free tier)
