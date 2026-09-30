@@ -18,7 +18,18 @@ A working PoC that turns an ESP32 into a hardware proxy that tunnels traffic ove
 
 ## What it does
 
-The ESP32 is the actual TCP endpoint. The Python script acts as a local proxy on the laptop. MQTT is just the pipe between them.
+Here's an example to show how this works (for more technical details see below). The purpose is to bypass internet restrictions.
+
+**Location A:** A country with highly censored / very restrictive internet. Laptop running Win10 + Firefox + local python proxy.
+**Location B:** Uncensored, free internet. ESP32 is connected here.
+**Location C:** MQTT server - this must be reachable from A and B but does not have to be in a place with uncensored internet.
+(definition: MQTT (Message Queuing Telemetry Transport) is a lightweight, open-standard messaging protocol designed for resource-constrained devices and unreliable networks)
+
+1. The laptop browser tries to access a restricted website, and sends a request to the local python proxy, which sends this to the MQTT server.
+2. The ESP32 reads the bytes from the MQTT server and forwards them to the restricted website which is normally inaccessible from A. 
+3. ESP32 receives response from the website, and uploads it to the MQTT server.
+4. Laptop at A reads response from restricted website and (via python) shows it in the browser.
+
 ![Alt text](esp-mqtt-diag.svg)
 Tested with: Windows 10 Firefox / Python 3 <--> ESP32-S3 Dev Module <--> HiveMQ Cloud (free tier)
 > ⚠️ The MQTT broker must be reachable from whichever country the laptop is in.
@@ -26,15 +37,16 @@ Tested with: Windows 10 Firefox / Python 3 <--> ESP32-S3 Dev Module <--> HiveMQ 
 
 ## Confirmed working
 
-- ✅ YouTube
-- ✅ Gmail
-- ✅ Twitter / X
-- ✅ News sites
-- ✅ Reddit
+- YouTube
+- Gmail
+- Twitter / X
+- News sites
+- Reddit
+- Google, Duckduckgo etc.
 
 ## Known issues
 
-- ❌ Instagram gets stuck
+- Instagram gets stuck
 ---
 ## How it works
 
