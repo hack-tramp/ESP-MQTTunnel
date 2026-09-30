@@ -28,10 +28,18 @@ Here's an example to show how this works (for more technical details see below).
 
 (definition: MQTT (Message Queuing Telemetry Transport) is a lightweight, open-standard messaging protocol designed for resource-constrained devices and unreliable networks)
 
-1. The laptop browser tries to access a restricted website, and sends a request to the local python proxy, which sends this to the MQTT server.
-2. The ESP32 reads the bytes from the MQTT server and forwards them to the restricted website which is normally inaccessible from A. 
-3. ESP32 receives response from the website, and uploads it to the MQTT server.
-4. Laptop at A reads the restricted site's response from the MQTT server and (via python) shows it in the browser.
+
+1. **laptop ---> MQTT server**
+The laptop browser tries to access a restricted website, and sends a request to the local python proxy, which sends this to the MQTT server.
+
+2. **MQTT server ----> ESP32 ---> www.example.com**
+The ESP32 reads the bytes from the MQTT server and forwards them to the restricted website which is normally inaccessible from A.
+
+3. **www.example.com ---> ESP32 ---> MQTT server** 
+ESP32 receives response from the website, and uploads it to the MQTT server.
+
+4. **MQTT server ---> laptop**
+Laptop at A reads the restricted site's response from the MQTT server and (via python) shows it in the browser.
 
 ![Alt text](esp-mqtt-diag.svg)
 Tested with: Windows 10 Firefox / Python 3 <--> ESP32-S3 Dev Module <--> HiveMQ Cloud (free tier)
