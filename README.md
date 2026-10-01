@@ -12,7 +12,7 @@
 ![diagram](esp-mqtt-diag.png)
 
 
-A working PoC that turns an ESP32 into a hardware proxy that tunnels traffic over MQTT. Because it connects out to a broker, you can bypass firewalls/censorship without open ports or public IP. All traffic is relayed **raw** — no TLS interception, no decryption.
+A working PoC that turns an ESP32 into a hardware proxy that tunnels traffic over MQTT. Because it connects to a MQTT broker, you can bypass firewalls/censorship without open ports/public IP (which would be needed for direct ESP32 - laptop comms). All traffic is relayed **raw** — no TLS interception, no decryption.
 
 ---
 
