@@ -24,7 +24,7 @@ Here's an example to show how this works (for more technical details see below).
 
 **Location B:** Uncensored, free internet. ESP32 is connected here.
 
-**Location C:** MQTT server - this must be reachable from A and B but does not have to be in a place with uncensored internet.
+**Location C:** MQTT server - this must be reachable from A and B but does not have to be in a place with uncensored internet. I used HiveMQ cloud (free tier).
 
 (definition: MQTT (Message Queuing Telemetry Transport) is a lightweight, open-standard messaging protocol designed for resource-constrained devices and unreliable networks)
 
