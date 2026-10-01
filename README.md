@@ -9,7 +9,7 @@
 </p>
 	
 
-[diagram](esp-mqtt-diag.png)
+![diagram](esp-mqtt-diag.png)
 
 
 A working PoC that turns an ESP32 into a hardware proxy that tunnels traffic over MQTT. Because it connects out to a broker, you can bypass firewalls/censorship without open ports or public IP. All traffic is relayed **raw** — no TLS interception, no decryption.
